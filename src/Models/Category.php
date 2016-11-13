@@ -2,11 +2,12 @@
 
 namespace Kordy\Ticketit\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
 
-class Category extends Model
+
+class Category extends Eloquent
 {
-    protected $table = 'ticketit_categories';
+    protected $collection = 'ticketit_categories';
 
     protected $fillable = ['name', 'color'];
 

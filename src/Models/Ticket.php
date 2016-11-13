@@ -2,17 +2,17 @@
 
 namespace Kordy\Ticketit\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
 use Jenssegers\Date\Date;
 use Kordy\Ticketit\Traits\ContentEllipse;
 use Kordy\Ticketit\Traits\Purifiable;
 
-class Ticket extends Model
+class Ticket extends Eloquent
 {
     use ContentEllipse;
     use Purifiable;
 
-    protected $table = 'ticketit';
+    protected $collection = 'ticketit';
     protected $dates = ['completed_at'];
 
     /**

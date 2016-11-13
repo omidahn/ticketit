@@ -4,12 +4,13 @@ namespace Kordy\Ticketit\Models;
 
 use Illuminate\Database\Eloquent\Model as Model;
 use Kordy\Ticketit\Traits\ContentEllipse;
+use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
 
-class Configuration extends Model
+class Configuration extends Eloquent
 {
     use ContentEllipse;
 
-    public $table = 'ticketit_settings';
+    public $collection = 'ticketit_settings';
 
     public $fillable = [
     'lang',

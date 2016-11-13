@@ -5,13 +5,14 @@ namespace Kordy\Ticketit\Models;
 use Illuminate\Database\Eloquent\Model;
 use Kordy\Ticketit\Traits\ContentEllipse;
 use Kordy\Ticketit\Traits\Purifiable;
+use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
 
-class Comment extends Model
+class Comment extends Eloquent
 {
     use ContentEllipse;
     use Purifiable;
 
-    protected $table = 'ticketit_comments';
+    protected $collection = 'ticketit_comments';
 
     /**
      * Get related ticket.

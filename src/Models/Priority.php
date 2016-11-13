@@ -2,11 +2,11 @@
 
 namespace Kordy\Ticketit\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
 
-class Priority extends Model
+class Priority extends Eloquent
 {
-    protected $table = 'ticketit_priorities';
+    protected $collection = 'ticketit_priorities';
 
     protected $fillable = ['name', 'color'];
 
