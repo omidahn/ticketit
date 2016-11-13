@@ -26,10 +26,7 @@ class TicketitServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        if (!Schema::hasTable('migrations')) {
-            // Database isn't installed yet.
-            return;
-        }
+        require __DIR__.'/../../../../routes/web.php';
         $installer = new InstallController();
 
         // if a migration or new setting is missing scape to the installation
